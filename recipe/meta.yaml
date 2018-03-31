@@ -1,9 +1,8 @@
 {% set name = "transaction" %}
-{% set version = "2.1.2" %}
+{% set version = "2.2.0" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "b9bc365e7dba3877e0f6fdee32aa029b8c0c1eb4fe227f524bffd5fc46064bd5" %}
-{% set build = 0 %}
+{% set hash = "714d6883dfd5f41f454afce716c58bb59ba10af3d23562b5be781cbbd6fb5100" %}
 
 package:
   name: {{ name|lower }}
@@ -15,8 +14,9 @@ source:
   {{ hash_type }}: {{ hash }}
 
 build:
+  noarch: python
   preserve_egg_dir: True
-  number: {{ build }}
+  number: 0
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
