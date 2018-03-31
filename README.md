@@ -14,9 +14,7 @@ Summary: Transaction management for Python
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/transaction-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/transaction-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/transaction-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/transaction-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/transaction-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/transaction-feedstock/branch/master)
+All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/transaction-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/transaction-feedstock)
 
 Current release info
 ====================
