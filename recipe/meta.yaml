@@ -1,8 +1,8 @@
 {% set name = "transaction" %}
-{% set version = "2.4.0" %}
+{% set version = "3.0.0" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "726059c461b9ec4e69e5bead6680667a3db01bf2adf901f23e4031228a0f9f9f" %}
+{% set hash = "3b0ad400cb7fa25f95d1516756c4c4557bb78890510f69393ad0bd15869eaa2d" %}
 
 package:
   name: {{ name|lower }}
