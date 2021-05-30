@@ -1,23 +1,18 @@
 {% set name = "transaction" %}
-{% set version = "2.4.0" %}
-{% set bundle = "tar.gz" %}
-{% set hash_type = "sha256" %}
-{% set hash = "726059c461b9ec4e69e5bead6680667a3db01bf2adf901f23e4031228a0f9f9f" %}
+{% set version = "3.0.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.{{ bundle }}
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
-  {{ hash_type }}: {{ hash }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 0c15ef0b7ff3518357ceea75722a30d974c3f85e11aa5cec5d5a2b6a40cfcf68
 
 build:
   noarch: python
-  preserve_egg_dir: True
-  number: 1
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
@@ -32,6 +27,10 @@ requirements:
 test:
   imports:
     - transaction
+  commands:
+    - pip check
+  requires: 
+    - pip
 
 about:
   home: https://github.com/zopefoundation/transaction
