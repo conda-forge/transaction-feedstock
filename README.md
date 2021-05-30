@@ -3,7 +3,7 @@ About transaction
 
 Home: https://github.com/zopefoundation/transaction
 
-Package license: ZPL 2.1
+Package license: ZPL-2.1
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/transaction-feedstock/blob/master/LICENSE.txt)
 
