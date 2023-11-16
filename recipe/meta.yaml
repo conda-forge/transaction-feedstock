@@ -6,23 +6,20 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/transaction-{{ version }}.tar.gz
   sha256: 68035db913f60d1be12f6563d201daab36c83e763de15899ff8338f26e5e62f2
 
 build:
   noarch: python
-  number: 0
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 1
 
 requirements:
   host:
+    - python >=3.7
     - pip
-    - python >=3.6
-    - setuptools
-
   run:
-    - python >=3.6
-    - setuptools
+    - python >=3.7
     - zope.interface
 
 test:
