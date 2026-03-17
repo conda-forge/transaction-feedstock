@@ -1,18 +1,18 @@
 {% set name = "transaction" %}
-{% set version = "5.0" %}
+{% set version = "5.1" %}
 
 package:
   name: {{ name|lower }}
-  version: {{ version }}
+  version: "{{ version }}"
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/transaction-{{ version }}.tar.gz
-  sha256: 106e7bd782bcc0cb5119fc9225b0c9a71dfc53adb938be905223adaef22b1174
+  sha256: f6ca8639a3e54f6991de0d9c0983a7cd91acb21a825cb544c168269be956bd41
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
